@@ -7,6 +7,15 @@ body {
   display: grid;
   grid-template-columns: 1fr;
 }
+a {
+  color: lightseagreen;
+}
+a:visited {
+  color: #0e5c5c;
+}
+a:hover {
+  color: #8a8a8a;
+}
 
 /* Nav */
 .nav-wrapper {
@@ -76,18 +85,6 @@ body {
   opacity: 0;
   width: 50%;
   margin-bottom: 20px;
-}
-.img-text-wrapper:hover .logo-wrapper img {
-  transition: 1s;
-  opacity: 100;
-}
-.img-text-wrapper .subtitle {
-  color: transparent;
-  font-weight: 600;
-}
-.img-text-wrapper:hover .subtitle {
-  transition: 1s;
-  color: lightseagreen;
 }
 .img-darken {
   transition: 1s;
