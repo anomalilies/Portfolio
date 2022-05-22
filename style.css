@@ -6,7 +6,7 @@ body {
   margin: 0vh;
   font-family: "Montserrat", sans-serif;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 #circle {

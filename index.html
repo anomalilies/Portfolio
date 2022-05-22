@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
     </style>
@@ -132,15 +132,17 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+      var body = document.getElementsByClassName("html,body")
+
       $(window).on("load", function () {
-        $(".loader-wrapper").fadeOut("slow");
+        body.style.overflow = "hidden".then($(".loader-wrapper").fadeOut("slow"));
+        body.style.overflow = "visible"; 
       });
 
       var modal = document.getElementById("myModal");
       var images = document.getElementsByClassName("myGallery");
       var modalImg = document.getElementById("myImage");
       var captionText = document.getElementById("caption");
-      var span = document.getElementsByClassName("close")[0];
 
       const mediaQuery = window.matchMedia("(min-width: 864px)");
       for (var i = 0; i < images.length; i++) {
@@ -157,6 +159,8 @@
           };
         }
       }
+
+      var span = document.getElementsByClassName("close")[0];
       span.onclick = function () {
         modal.style.display = "none";
       };
