@@ -212,7 +212,7 @@ li:last-child {
 .loader-wrapper {
   width: 100%;
   height: 100%;
-  position: static;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: #5a637a;
@@ -274,7 +274,7 @@ li:last-child {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 864px) {
   .modal-content {
     width: 100%;
   }
