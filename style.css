@@ -161,12 +161,12 @@ li:last-child {
   margin: 0vh;
   display: block;
   align-self: center;
-  max-width: 80%;
+  max-width: 50%;
   max-height: 100%;
   text-align: center;
   color: #f4ede5;
   padding: 2.5vh 0;
-  font-size: 3vh;
+  font-size: 2.5vh;
 }
 
 .modal-content,
