@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <div class="flex-container">
+      <div class="flex-left">
+        <p id="box">ANOMALILIES</p>
+        <p id="text">
+          Hello! I’m Lily, a British-American graphic designer and illustrator
+          currently located in Boston, MA.
+        </p>
+        <p id="sub">
+          <a href="index.html">GRAPHIC DESIGN</a> |
+          <a href="https://linkedin.com/in/lily-riley02" target="_blank"
+            >CONTACT</a
+          >
+        </p>
+      </div>
+
+      <div class="flex-right">
+        <ul>
+          <li>
+            <img class="myGallery" id="i" src="images/28.png" alt="" />
+            <div id="myModal" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="myImage" />
+              <div id="caption"></div>
+            </div>
+          </li>
+          <li>
+            <img class="myGallery" id="i" src="images/51.png" alt="" />
+          </li>
+          <li>
+            <img class="myGallery" id="i" src="images/14.png" alt="" />
+          </li>
+          <li>
+            <img
+              class="myGallery"
+              id="i"
+              src="images/35.png"
+              alt="Used as album art for Speak and Spell's collaborative album, 'Let it Radicalise You', dedicated to the BLM movement."
+            />
+          </li>
+          <li>
+            <img class="myGallery" id="i" src="images/5.png" alt="" />
+          </li>
+          <li>
+            <img class="myGallery" id="i" src="images/8.png" alt="" />
+          </li>
+          <li>
+            <img class="myGallery" id="i" src="images/7.png" alt="" />
+          </li>
+          <li>
+            <img class="myGallery" id="i" src="images/3.png" alt="" />
+          </li>
+          <li>
+            <img class="myGallery" id="i" src="images/4.png" alt="" />
+          </li>
+          <li>
+            <img
+              class="myGallery"
+              id="i"
+              src="images/16.png"
+              alt="A digital photo collage influenced by the effects of gambling and technology addiction. A big thanks to my friend Lucy for modelling for me!"
+            />
+          </li>
+          <li>
+            <img
+              class="myGallery"
+              id="i"
+              src="images/6.png"
+              alt="Long-exposure photography of New Year's fireworks."
+            />
+          </li>
+
+          <li>
+            <img
+              class="myGallery"
+              id="i"
+              src="images/9.png"
+              alt="A stencil screen print, complete with embroidery, inspired by Polynesian culture."
+            />
+          </li>
+          <li>
+            <img
+              class="myGallery"
+              id="i"
+              src="images/2.png"
+              alt="Using waste plastic from my company at the time, this college group project focused on creating upcycled plant pots."
+            />
+          </li>
+          <li>
+            <img
+              class="myGallery"
+              id="i"
+              src="images/12.png"
+              alt="My first college project, a model of a brain to be used as an award for scientific achievement. Made with hand-cut Perspex, the model also functions as an interactive puzzle, with each piece being magnetic."
+            />
+          </li>
+
+          <li>
+            <img
+              class="myGallery"
+              id="i"
+              src="images/13.png"
+              alt="A textiles project from college, incorporating traditional pleating and origami techniques when using paper instead of fabric to make a dress."
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      var body = document.getElementsByClassName("html,body");
+
+      $(window).on("load", function () {
+        body.style.overflow = "hidden".then(
+          $(".loader-wrapper").fadeOut("slow")
+        );
+        body.style.overflow = "visible";
+      });
+
+      var modal = document.getElementById("myModal");
+      var images = document.getElementsByClassName("myGallery");
+      var modalImg = document.getElementById("myImage");
+      var captionText = document.getElementById("caption");
+
+      const mediaQuery = window.matchMedia("(min-width: 864px)");
+      for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        if (mediaQuery.matches) {
+          img.onclick = function (e) {
+            modal.style.display = "flex";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+          };
+        } else {
+          img.onclick = function () {
+            window.open(this.src);
+          };
+        }
+      }
+
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      modalImg.onclick = function () {
+        window.open(modalImg.src);
+      };
+    </script>
+  </body>
+</html>
